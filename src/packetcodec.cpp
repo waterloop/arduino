@@ -33,6 +33,13 @@
 #define PIEZO_1_ID_1 1048
 #define PIEZO_1_ID_2 1049
 
+const int IMU_ACCEL_ID[] = {IMU_1_ACCEL_ID_1, IMU_1_ACCEL_ID_2};
+const int IMU_GYRO_ID[] = {IMU_1_GYRO_ID_1, IMU_1_GYRO_ID_2};
+const int TEMP_1_ID[] = {TEMP_1_ID_1, TEMP_1_ID_2, TEMP_1_ID_3, TEMP_1_ID_4, TEMP_1_ID_5, TEMP_1_ID_6, TEMP_1_ID_7, TEMP_1_ID_8, TEMP_1_ID_9, TEMP_1_ID_10};
+const int TEMP_2_ID[] = {TEMP_2_ID_1, TEMP_2_ID_2};
+const int PHOTO_2_ID[] = {PHOTO_2_ID_1, PHOTO_2_ID_2};
+const int HALL_1_ID[] = {HALL_1_ID_1, HALL_1_ID_2, HALL_1_ID_3, HALL_1_ID_4, HALL_1_ID_5, HALL_1_ID_6};
+const int PIEZO_1_ID[] = {PIEZO_1_ID_1, PIEZO_1_ID_2};
 
 void send_can(uint32_t packet_id, uint8_t len, uint8_t *data);
 
