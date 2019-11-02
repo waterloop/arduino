@@ -60,6 +60,21 @@ void serialize_mcp6050_accelerometer(int16_t x, int16_t y, int16_t z) {
     send_can(IMU_1_ACCEL_ID_1, 6, data);
 }
 
+void serialize_mcp6050_gyroscope(int16_t x, int16_t y, int16_t z) {
+    uint8_t data[6];
+
+    data[1] = x;
+    data[0] = x >> 8;
+
+    data[3] = y;
+    data[2] = y >> 8;
+
+    data[5] = z;
+    data[4] = z >> 8;
+
+    send_can(IMU_1_GYRO_ID_1, 6, data);
+}
+
 void serialize_tmp411(int16_t t) {
     uint8_t data[2];
 
